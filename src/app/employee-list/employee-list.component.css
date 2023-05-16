@@ -1,0 +1,177 @@
+/* Set the background color */
+.bgc {
+  background: linear-gradient(120deg,rgb(232, 220, 179), #a2ebe5, #8785d2);
+}
+
+/* Set the container styles */
+.bgc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Set the image container styles */
+.image-container {
+  width: 50%;
+  padding: 20px;
+}
+
+/* Set the image styles */
+.image-container img {
+  width: 300px;
+  height: 380px;
+  max-width: 400px;
+}
+
+/* Set the table container styles */
+.table-container {
+  width: 300%;
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x:auto ;
+}
+
+/* Set the table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  
+}
+
+thead tr {
+  background: linear-gradient(to right, #00ffff, #ff00ff);
+  color: white;
+}
+
+tbody tr {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.gradient-row {
+  background: linear-gradient(90deg, #79b5e7 0%, #f6f8f8 100%);
+}
+
+/* Set the button styles */
+
+
+  .update-button {
+    width: 6.5em;
+    height: 1.8em;
+    margin: 0.5em;
+    background: rgb(0, 8, 255);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .update-button:hover {
+    color: rgb(0, 0, 0);
+   }
+   
+   .update-button:after {
+    content: "";
+    background: rgb(0, 173, 58);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .update-button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+
+   .delete-button {
+    width: 6.5em;
+    height: 1.8em;
+    margin: 0.5em;
+    background: rgb(0, 8, 255);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .delete-button:hover {
+    color: black;
+   }
+   
+   .delete-button:after {
+    content: "";
+    background: rgb(255, 0, 0);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .delete-button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+   .view-button {
+    width: 6.5em;
+    height: 1.8em;
+    margin: 0.5em;
+    background: rgb(0, 8, 255);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .view-button:hover {
+    color: black;
+   }
+   
+   .view-button:after {
+    content: "";
+    background: rgb(34, 237, 237);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .view-button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }

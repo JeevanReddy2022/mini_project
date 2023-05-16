@@ -1,0 +1,34 @@
+.employee-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .employee-card h2 {
+    margin-top: 0;
+  }
+  
+  .employee-card ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .employee-card li {
+    margin: 10px 0;
+  }
+  
+  .employee-card a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .employee-card a:hover {
+    background-color: #0062cc;
+  }
+  

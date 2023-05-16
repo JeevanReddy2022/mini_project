@@ -1,0 +1,43 @@
+
+img{
+    height: 650px;
+    width: 300px;
+    opacity: .8;
+  }
+.bgc{
+    background-image: linear-gradient(120deg, #807de5, #a2ebe5,rgb(109, 226, 140)); 
+  
+  }
+.card {
+    width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #8bf9a6, #d7ee86);
+    border: 3px solid #3300ff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%)
+  }
+  
+  .card-body {
+    padding: 20px;
+    font-weight: bold;
+    
+  }
+  
+  .profile-pic {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid #0318ff;
+    padding: 10px;
+  }
+  
+  .row {
+    align-items: center;
+  }
+  

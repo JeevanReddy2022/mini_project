@@ -1,0 +1,54 @@
+<div class="bgc">
+    <img stytle='background-size:cover,' src="https://static.thenounproject.com/png/3893061-200.png" alt="">
+
+<!--br>
+<div>
+    <div>
+        <label> <b> First Name: </b></label> {{employee.firstname}}
+    </div>
+    <br>
+
+    <div>
+        <label> <b> Last Name: </b></label> {{employee.lastname}}
+    </div>
+    <br>
+
+    <div>
+        <label> <b> Email Id: </b></label> {{employee.emailId}}
+    </div>
+    <br>
+   
+</div-->
+
+<div class="card">
+    <div class="card-body">
+      <div class="row align-items-center">
+        <h3 style="color:blueviolet; font-family: 'Times New Roman', Times, serif;text-align: center;"> VIEW EMPLOYEE DETAILS </h3>
+        <div class="col-md-3">
+          <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="profile picture" class="profile-pic">
+        </div>
+        <div class="col-md-9">
+            <div class="form-group row">
+                <label for="employee-id" class="col-sm-4 col-form-label">EmployeeID:</label>
+                <div class="col-sm-6">
+                    {{employee.emailId}}
+                </div>
+              </div>
+          <div class="form-group row">
+            <label for="first-name" class="col-sm-4 col-form-label">First Name:</label>
+            <div class="col-sm-6">
+                {{employee.firstname}}
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="last-name" class="col-sm-4 col-form-label">Last Name:</label>
+            <div class="col-sm-6">
+                {{employee.lastname}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
