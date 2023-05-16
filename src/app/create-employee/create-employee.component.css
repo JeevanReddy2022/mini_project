@@ -59,7 +59,7 @@ img{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: repeating-radial-gradient(circle, #0fd850 0%, #bb47f9 100%);
+    background-image: linear-gradient(to right, #0fd850 0%, #bb47f9 100%);
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -76,3 +76,19 @@ img{
     left: 50%;
     transform: translate(-50%, -50%)
   } */
+  .routing-button {
+    background-color: greenyellow;
+    border: black;
+    color: rgb(107, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    border-radius: 8px;
+    padding: 6px 10px;
+  }
+  
+  .routing-button:hover {
+    color: white;
+    background-color: blueviolet;
+  }

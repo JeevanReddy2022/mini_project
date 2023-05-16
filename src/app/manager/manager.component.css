@@ -1,34 +1,62 @@
-.employee-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
+
+.bgc {
+  background: linear-gradient(120deg,rgb(232, 220, 179), #a2ebe5, #8785d2);
+}
+
+/* Set the container styles */
+.bgc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+/* Set the image container styles */
+.image-container {
+  width: 100%;
+  padding: 35px;
   
-  .employee-card h2 {
-    margin-top: 0;
-  }
+}
+
+/* Set the image styles */
+.image-container img {
+  width: 350px;
+  height: 600px;
+  max-width: 400px;
+}
+.card {
+  width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #8bf9a6, #d7ee86);
+  border: 3px solid #3300ff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -120%)
+}
+
+.card-body {
+  padding: 20px;
+  font-weight: bold;
   
-  .employee-card ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .employee-card li {
-    margin: 10px 0;
-  }
-  
-  .employee-card a {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .employee-card a:hover {
-    background-color: #0062cc;
-  }
-  
+}
+.routing-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(107, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+.routing-button:hover {
+  color: white;
+  background-color: blueviolet;
+}

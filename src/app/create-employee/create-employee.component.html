@@ -36,8 +36,12 @@
 
 <div class="bgc">
     <img stytle='background-size:cover,' src="https://pic.onlinewebfonts.com/svg/img_117269.png" alt="">
+
 <div class="container">
     <div class="card" style="background-color: rgb(105, 192, 213); opacity: 0.85;">
+        <button routerLink="/manager" routerLinkActive="active" class="custom-btn btn-1">
+            Home
+            </button>
         <h5 class="card-header" style="text-align: center;background-color:antiquewhite;font-weight: bold">New Employee</h5>
   <div class="card-body">
       <form [formGroup]="addEmployee" (ngSubmit)="onSubmit()">
@@ -73,7 +77,7 @@
             <button class="btn btn-secondary cancel-button" type="reset" (click)="onReset()">Cancel</button><br>
         </div>
         <div class="text-center">
-        <a href="" routerLink="/employees" style="color:rgb(0, 0, 0); font-family: 'Times New Roman', Times, serif; font-weight: bold;">CHECK EMPLOYEE LIST</a>
+            <button routerLink="/employees" routerLinkActive="active" class="routing-button" style="font-weight: bold;">Employee List</button>
         </div>
         </form>
   </div>

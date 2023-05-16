@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 /* Set the image container styles */
@@ -174,4 +174,51 @@ tbody tr {
     transform: skewX(-45deg) scale(1, 1);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+   }
+
+   .routing-button {
+    background-color: greenyellow;
+    border: black;
+    color: rgb(107, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    border-radius: 8px;
+    padding: 6px 10px;
+  }
+  
+  .routing-button:hover {
+    color: white;
+    background-color: blueviolet;
+  }
+
+  .custom-btn {
+    width: 50px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 10px;
+   font-size: small; 
+    font-weight:100;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+      7px 7px 20px 0px rgba(0,0,0,.1),
+      4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+   }
+   
+   .btn-1 {
+    background: rgb(181, 186, 255);
+    background: linear-gradient(180deg, rgb(31, 131, 6) 0%, rgb(189, 189, 210) 100%);
+    border: none;
+   }
+   
+   .btn-1:hover {
+    background: rgb(160, 161, 238);
+    background: linear-gradient(0deg, rgb(0, 17, 255) 0%, rgba(2,126,251,1) 100%);
    }
