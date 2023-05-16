@@ -2,8 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../service/login.service';
-import { User } from '../user';
+import { EmployeeService } from '../employee.service';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-login',
@@ -14,13 +14,13 @@ export class LoginComponent implements OnInit{
   loginForm!: FormGroup;
   submitted = false;
   
-  user: User = new User();
+  employee: Employee = new Employee();
 
-  constructor(private formBuilder: FormBuilder,private router: Router, private loginService:LoginService) { }
+  constructor(private formBuilder: FormBuilder,private router: Router, private employeeService:EmployeeService) { }
 
   navigateToUser() {
       if(this.loginForm.valid){
-          this.router.navigate(['/user'])
+          this.router.navigate(['/employee'])
       }
       
     }
@@ -61,10 +61,10 @@ export class LoginComponent implements OnInit{
   //   }
 
   getemail() {
-    this.loginService.getAllRegisterList(this.user.email).subscribe(
+    this.employeeService.getEmployeesList().subscribe(
       data=>{
         console.log(data);
-        sessionStorage.setItem("loggedUserEmail",this.user.email);
+        sessionStorage.setItem("loggedUserEmail",this.employee.emailId);
         document.getElementById("beforeLogin").style.display = "none";
         document.getElementById("afterLogin").style.display = "block";
         this.router.navigate(['/billing']);
@@ -84,7 +84,7 @@ export class LoginComponent implements OnInit{
 
       // display form values on success
       // alert('LogIn SUCCESS!\n\n' + JSON.stringify(this.loginForm.value, null, 4));
-      if(this.user.email=="admin@gmail.com" && this.user.password == "Admin@123"){
+      if(this.employee.emailId=="admin@gmail.com" && this.employee.password == "Admin@123"){
         console.log("Admin User");
         document.getElementById("beforeLogin").style.display = "none";
         document.getElementById("afterLogin").style.display = "block";
