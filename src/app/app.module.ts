@@ -11,6 +11,10 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { ManagerComponent } from './manager/manager.component';
+import { ApplyleaveComponent } from './applyleave/applyleave.component';
+import { CertificatesComponent } from './certificates/certificates.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { ManagerComponent } from './manager/manager.component';
     EmployeeDetailsComponent,
     HeaderComponent,
     LoginComponent,
-    ManagerComponent
+    ManagerComponent,
+    ApplyleaveComponent,
+    CertificatesComponent,
+    
+   
   ],
   imports: [
     BrowserModule,
