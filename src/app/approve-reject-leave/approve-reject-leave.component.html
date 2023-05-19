@@ -1,0 +1,33 @@
+<div class="bgc">
+
+    <div class="container">
+        <h2 style="display: flex; align-items: center; font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;">
+          <button routerLink="" class="btn btn-primary" style="margin-right: 10px;">Home</button>
+          LEAVE APPLICATIONS
+        </h2><div class="table-container">
+<table>
+    <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Leave Type</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leaveRequests">
+        <td>{{ leave.employeeName }}</td>
+        <td>{{ leave.leaveType }}</td>
+        <td>{{ leave.fromDate }}</td>
+        <td>{{ leave.toDate }}</td>
+        <td>
+          <button (click)="approveLeave(leave)" class="accept-button">Approve</button>
+          <button (click)="rejectLeave(leave)" class="delete-button">Reject</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </div>

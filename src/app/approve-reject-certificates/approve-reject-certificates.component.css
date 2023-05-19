@@ -1,0 +1,143 @@
+.bgc {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    background: linear-gradient(120deg, #807de5, #a2ebe5,rgb(109, 226, 140)); 
+  
+  }
+  
+  .container {
+    width: 1000px;
+    padding: 20px;
+    background: #279c5a;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   
+  
+}
+  
+
+/* Styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  .table-container {
+    width: 100%;
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x:auto ;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Styles for the buttons */
+  /* button {
+    padding: 8px 16px;
+    margin-right: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:focus {
+    outline: none;
+  } */
+  
+  .accept-button {
+    width: 6.5em;
+    height: 1.8em;
+    margin: 0.5em;
+    background: rgb(0, 8, 255);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .accept-button:hover {
+    color: rgb(0, 0, 0);
+   }
+   
+   .accept-button:after {
+    content: "";
+    background: rgb(0, 255, 85);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .accept-button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }
+
+
+   .delete-button {
+    width: 6.5em;
+    height: 1.8em;
+    margin: 0.5em;
+    background: rgb(0, 8, 255);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .delete-button:hover {
+    color: black;
+   }
+   
+   .delete-button:after {
+    content: "";
+    background: rgb(255, 0, 0);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .delete-button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }

@@ -1,0 +1,23 @@
+<div class="bgc">
+    <div class="container">
+        <h2 style="text-align:center; font-family: 'Times New Roman', Times, serif;font-weight: bold;">LEAVE STATUS</h2>
+<table>
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of appliedLeaves" style="background: linear-gradient(90deg, #ffffff, #c9cfcf,rgb(255, 255, 255));">
+        <td>{{ leave.leaveType }}</td>
+        <td>{{ leave.fromDate }}</td>
+        <td>{{ leave.toDate }}</td>
+        <td>{{ leave.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>

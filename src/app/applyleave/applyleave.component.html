@@ -1,5 +1,7 @@
 <div class="bgc">
 <div class="container">
+    <h2 style="text-align: center; font-size: large;font-weight: bold;font-family: 'Times New Roman', Times, serif;color: blue;">CERTIFICATIONS</h2>
+        
     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 <form (ngSubmit)="submitForm()">
       
@@ -19,13 +21,11 @@
             </select>
           </td>
           <td>
-            <input type="date" [(ngModel)]="toDate" (change)="validateToDate()" name="toDate">
-            
-
+            <input type="date" [(ngModel)]="fromDate" (change)="validateFromDate()" name="fromDate">
           </td>
           <td>
-            
-            <input type="date" [(ngModel)]="fromDate" name="fromDate">
+            <input type="date" [(ngModel)]="toDate" (change)="validateToDate()" name="toDate">
+           
           </td>
         </tr>
       </tbody>

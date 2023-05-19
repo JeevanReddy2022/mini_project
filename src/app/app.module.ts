@@ -13,6 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { ManagerComponent } from './manager/manager.component';
 import { ApplyleaveComponent } from './applyleave/applyleave.component';
 import { CertificatesComponent } from './certificates/certificates.component';
+import { LeavestatusComponent } from './leavestatus/leavestatus.component';
+import { CertificatestatusComponent } from './certificatestatus/certificatestatus.component';
+import { ApproveRejectLeaveComponent } from './approve-reject-leave/approve-reject-leave.component';
+import { ApproveRejectCertificatesComponent } from './approve-reject-certificates/approve-reject-certificates.component';
 
 
 
@@ -28,6 +32,10 @@ import { CertificatesComponent } from './certificates/certificates.component';
     ManagerComponent,
     ApplyleaveComponent,
     CertificatesComponent,
+    LeavestatusComponent,
+    CertificatestatusComponent,
+    ApproveRejectLeaveComponent,
+    ApproveRejectCertificatesComponent,
     
    
   ],

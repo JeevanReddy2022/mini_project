@@ -32,6 +32,19 @@ export class ApplyleaveComponent {
     }
   }
 
+  validateFromDate(): void {
+    const fromDateValue = new Date(this.fromDate);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // Set today's time to midnight for comparison
+
+    if (isNaN(fromDateValue.getTime()) || fromDateValue < today) {
+      // Show error message for incorrect or previous date
+      this.errorMessage = 'Invalid date. Please select a valid date.';
+    } else {
+      this.errorMessage = '';
+    }
+  }
+
   submitForm(): void {
     // Handle form submission logic here
     if (!this.selectedLeaveType || !this.toDate || !this.fromDate) {

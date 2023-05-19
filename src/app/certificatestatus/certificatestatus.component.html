@@ -1,0 +1,23 @@
+<div class="bgc">
+
+<div class="container">
+    <h2 style="text-align:center; font-family: 'Times New Roman', Times, serif;font-weight: bold;color: #ffffff;">CERTIFICATE STATUS</h2>
+<div class="table-container">
+<table>
+    <thead>
+      <tr>
+        <th>Certificate Name</th>
+        <th>Updated Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let certificate of certificates" style="background: linear-gradient(90deg, #ffffff, #c9cfcf,rgb(255, 255, 255));">
+        <td>{{ certificate.name }}</td>
+        <td>{{ certificate.issueDate }}</td>
+        <td>{{ certificate.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
