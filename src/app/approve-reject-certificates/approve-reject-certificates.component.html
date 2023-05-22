@@ -7,29 +7,26 @@
         </h2>
       
         <div class="table-container">
-<table>
-    <thead>
-      <tr>
-        
-        <th>Employee Name</th>
-        <th>Certificate Name</th>
-        
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let certificate of certificates">
-        
-        <td>{{ certificate.employeeName }}</td>
-        <td>{{ certificate.name }}</td>
-        
-        <td>
-          <button (click)="approveCertificate(certificate)" class="accept-button">Approve</button>
-          <button (click)="rejectCertificate(certificate)" class="delete-button">Reject</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <table>
+            <thead>
+              <tr>
+                <th>Employee Name</th>
+                <th>Certificate Name</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let certificate of certificates">
+                <td style="color: #ffffff;font-weight: 700;">{{ certificate.employeeName }}</td>
+                <td style="color: #ffffff;font-weight: 700;">{{ certificate.name }}</td>
+                <td>
+                  <button (click)="approveCertificate(certificate)" class="accept-button">Approve</button>
+                  <button (click)="rejectCertificate(certificate)" class="delete-button">Reject</button>
+                  <button (click)="downloadCertificate(certificate)" class="download-button">Download</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
   </div>
   </div>
   </div>

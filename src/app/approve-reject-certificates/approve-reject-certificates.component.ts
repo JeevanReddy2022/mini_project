@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+
 interface Certificate {
   id: number;
   name: string;
   employeeName: string;
-  issueDate: string;
   status: string;
 }
+
 @Component({
   selector: 'app-approve-reject-certificates',
   templateUrl: './approve-reject-certificates.component.html',
@@ -62,5 +63,18 @@ export class ApproveRejectCertificatesComponent {
         console.error('Error rejecting certificate:', error);
       }
     );
+  }
+
+  downloadCertificate(certificate: Certificate): void {
+    // Replace with the actual backend endpoint to retrieve the certificate file URL
+    const downloadUrl = '/api/certificates/' + certificate.id + '/download';
+    
+    // Create a temporary anchor element
+    const anchor = document.createElement('a');
+    anchor.href = downloadUrl;
+    anchor.download = 'certificate.pdf';
+    
+    // Trigger the download
+    anchor.click();
   }
 }

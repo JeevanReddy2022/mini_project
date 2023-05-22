@@ -141,3 +141,43 @@ table {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
    }
+
+   
+   .download-button {
+    width: 6.5em;
+    height: 1.8em;
+    margin: 0.5em;
+    background: rgb(0, 8, 255);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+   }
+   
+   .download-button:hover {
+    color: black;
+   }
+   
+   .download-button:after {
+    content: "";
+    background: rgb(0, 238, 255);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+   }
+   
+   .download-button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+   }

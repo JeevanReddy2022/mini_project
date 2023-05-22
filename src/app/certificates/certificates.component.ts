@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-certificates',
@@ -6,37 +7,45 @@ import { Component } from '@angular/core';
   styleUrls: ['./certificates.component.css']
 })
 export class CertificatesComponent {
-  certificateTypes: string[] = ['AWS', 'SpringBoot', 'Angular','DevOps','Excel','Azure'];
-  selectedCertificate: string;
-  toDate: string;
+  selectedFile: File;
   fromDate: string;
+  toDate: string;
   errorMessage: string;
   message: string;
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
-
   submitForm(): void {
-    // Handle form submission logic here
-    if (!this.selectedCertificate || !this.toDate || !this.fromDate) {
+    if (!this.selectedFile || !this.fromDate || !this.toDate) {
       this.errorMessage = 'Please fill in all fields.';
       return;
     }
-  
-    // Additional form validation and submission code goes here
+
+    const formData = new FormData();
+    formData.append('file', this.selectedFile);
+    formData.append('fromDate', this.fromDate);
+    formData.append('toDate', this.toDate);
+
+    // Send the form data to the backend
+    this.http.post('backend-url', formData)
+      .subscribe(
+        response => {
+          this.message = 'File uploaded successfully.';
+        },
+        error => {
+          this.errorMessage = 'Error uploading file. Please try again.';
+        }
+      );
 
     // Clear error message
-    
     this.errorMessage = '';
   }
 
-  private formatDate(date: Date): string {
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    return `${year}-${month}-${day}`;
+  onFileChange(event: any): void {
+    const files = event.target.files;
+    if (files && files.length > 0) {
+      this.selectedFile = files[0];
+    }
   }
 }
-
-

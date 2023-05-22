@@ -1,44 +1,34 @@
 <div class="bgc">
-
-    <div class="container">
-        <h2 style="text-align: center; font-size: large;font-weight: bold;font-family: 'Times New Roman', Times, serif;color: blue;">CERTIFICATIONS</h2>
-        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-    <form (ngSubmit)="submitForm()">
-          
-        <table>
-          <thead>
-            <tr>
-              <th>Certification</th>
-              <th>From Date</th>
-              <th>To Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <select [(ngModel)]="selectedCertificate" name="certificateTypes">
-                  <option *ngFor="let certificateType of certificateTypes" [value]="certificateType">{{ certificateType }}</option>
-                </select>
-              </td>
-              <td>
-                <input type="date" [(ngModel)]="fromDate" name="fromDate">
-  
-              </td>
-              <td>      
-                <input type="date" [(ngModel)]="toDate" name="toDate">
-                
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <div class="text-center">
-            <button class="btn btn-primary mr-1 submit-button" type="submit">Submit</button>     
-            <button style="background-color: red;" class="btn btn-secondary" routerLink="" routerLinkActive="active" type="submit">Back</button><br>
-        </div>
-        
-      </form>
+  <div class="container">
+    <h2 style="text-align: center; font-size: large; font-weight: bold; font-family: 'Times New Roman', Times, serif; color: blue;">CERTIFICATIONS</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <form (ngSubmit)="submitForm()" enctype="multipart/form-data">
+      <table>
+        <thead>
+          <tr>
+            <th>Certificate File (PDF)</th>
+            <th>From Date</th>
+            <th>To Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="file" (change)="onFileChange($event)" accept=".pdf" required>
+            </td>
+            <td>
+              <input type="date" [(ngModel)]="fromDate" name="fromDate">
+            </td>
+            <td>      
+              <input type="date" [(ngModel)]="toDate" name="toDate">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="text-center">
+        <button class="btn btn-primary mr-1 submit-button" type="submit">Submit</button>     
+        <button style="background-color: red;" class="btn btn-secondary" routerLink="" routerLinkActive="active" type="submit">Back</button><br>
       </div>
-      </div>
-    
-    
+    </form>
+  </div>
+</div>

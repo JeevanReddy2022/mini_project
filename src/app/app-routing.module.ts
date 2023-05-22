@@ -6,10 +6,11 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { LoginComponent } from './login/login.component';
 import { ManagerComponent } from './manager/manager.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
- 
+ {path:'home',component:HomeComponent},
   { path : 'employees' , component: EmployeeListComponent},
   { path : 'create-employee', component: CreateEmployeeComponent},
   { path : '', redirectTo: 'employees', pathMatch: 'full'},
