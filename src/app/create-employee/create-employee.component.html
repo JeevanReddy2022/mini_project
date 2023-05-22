@@ -1,87 +1,101 @@
-<!--div class="col-md-6 offset-md-3">
-<h3> Create Employee </h3>
-<form (ngSubmit) = "onSubmit()">
-
-    <div class="form-group">
-        <label> First Name </label>
-        <input type="text" class="form-control" id= "firstname"
-            [(ngModel)] = "employee.firstname" name = "firstname">
-    </div>
-    <br>
-
-
-    <div class="form-group">
-        <label> Last Name </label>
-        <input type="text" class="form-control" id= "lastname"
-            [(ngModel)] = "employee.lastname" name= "lastname">
-    </div>
-    <br>
-
-
-    <div clas="form-group">
-        <label> Email Id </label>
-        <input type="text" class="form-control" id= "emailId"
-            [(ngModel)] = "employee.emailId" name= "emailId">
-    </div>
-    <br>
-
-
-    <div class="form-group text-center">
-        <button class="btn btn-success" type="submit">Submit</button>
-      </div>
-      
-</form>
-</div--> 
-
-
-<div class="bgc">
-    <img stytle='background-size:cover,' src="https://pic.onlinewebfonts.com/svg/img_117269.png" alt="">
-
+  <div class="bgc">
+    <img stytle='background-size:cover,' src="https://t4.ftcdn.net/jpg/02/69/27/97/240_F_269279788_BTRK3S1z4yaMDJSnQw1MloWaxGP0NAyO.jpg" alt="">
 <div class="container">
-    <div class="card" style="background-color: rgb(105, 192, 213); opacity: 0.85;">
-        <button routerLink="/manager" routerLinkActive="active" class="custom-btn btn-1">
-            Home
-            </button>
-        <h5 class="card-header" style="text-align: center;background-color:antiquewhite;font-weight: bold">New Employee</h5>
-  <div class="card-body">
-      <form [formGroup]="addEmployee" (ngSubmit)="onSubmit()">
-          <div class="form-row">
+      <div class="card" style="background-color: rgb(105, 192, 213); opacity: 0.85;">
+        <button routerLink="/manager" routerLinkActive="active" class="custom-btn btn-1">Home</button>
+        <h5 class="card-header" style="text-align: center; background-color: antiquewhite; font-weight: bold;">Employee Registration</h5>
+        <div class="card-body">
+          <form [formGroup]="addEmployee" (ngSubmit)="onSubmit()">
+            <div class="form-row">
               <div class="form-group col">
-                  <label style="font-weight: bold;">FirstName</label>
-                  <input type="text" formControlName="firstName" class="form-control" [(ngModel)]="employee.firstname" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
-                  <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
-                      <div *ngIf="f['firstName'].errors['required']"> Name is required</div>
-                  </div>
+                <label style="font-weight: bold;">First Name</label>
+                <input type="text" formControlName="firstName" class="form-control" [(ngModel)]="employee.firstname" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
+                <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                  <div *ngIf="f['firstName'].errors['required']">Name is required</div>
+                </div>
               </div>
               <div class="form-group col">
-                  <label style="font-weight: bold;">LastName</label>
-                  <input type="text" formControlName="userName" class="form-control" [(ngModel)]="employee.lastname" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
-                  <div *ngIf="submitted && f['userName'].errors" class="invalid-feedback">
-                      <div *ngIf="f['userName'].errors['required']">LastName is required</div>
-                      <div *ngIf="f['userName'].errors['minLength']">LastName must be at least 5 characters</div>
-                  </div>
-              </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col">
-              <label style="font-weight: bold;">Email</label>
-              <input type="text" formControlName="email" class="form-control"  [(ngModel)]="employee.emailId" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
-              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
-                  <div *ngIf="f['email'].errors['required']">Email is required</div>
-                  <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+                <label style="font-weight: bold;">Last Name</label>
+                <input type="text" formControlName="lastName" class="form-control" [(ngModel)]="employee.lastname" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
+                <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                  <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
+                  <div *ngIf="f['lastName'].errors['minlength']">Last Name must be at least 5 characters</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="text-center">
-            <button class="btn btn-primary mr-1 submit-button" type="submit"><span></span><span></span><span></span><span></span>Submit</button>     
-            <button class="btn btn-secondary cancel-button" type="reset" (click)="onReset()">Cancel</button><br>
+            <div class="form-row">
+              <div class="form-group col">
+                <label style="font-weight: bold;">Email</label>
+                <input type="text" formControlName="email" class="form-control" [(ngModel)]="employee.emailId" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                  <div *ngIf="f['email'].errors['required']">Email is required</div>
+                  <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+                </div>
+              </div>
+              <div class="form-group col">
+                <label style="font-weight: bold;">Mobile Number</label>
+                <input type="text" formControlName="mobileno" class="form-control" [(ngModel)]="employee.mobileno" [ngClass]="{ 'is-invalid': submitted && f['mobileno'].errors }" />
+                <div *ngIf="submitted && f['mobileno'].errors" class="invalid-feedback">
+                  <div *ngIf="f['mobileno'].errors['required']">Mobile Number is required</div>
+                  <div *ngIf="f['mobileno'].errors['pattern']">Mobile Number must be 10 digits</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label style="font-weight: bold;">Date of Birth</label>
+                <input type="date" formControlName="dob" class="form-control" [(ngModel)]="employee.dob" [ngClass]="{ 'is-invalid': submitted && f['dob'].errors }" />
+                <div *ngIf="submitted && f['dob'].errors" class="invalid-feedback">
+                  <div *ngIf="f['dob'].errors['required']">Date of Birth is required</div>
+                </div>
+              </div>
+             
+              <div class="form-group col">
+                <label style="font-weight: bold;">Work Location</label>
+                <select formControlName="workLocation" class="form-control" [(ngModel)]="employee.workLocation">
+                  <option value="">Select Work Location</option>
+                  <option value="Bangalore">Bangalore</option>
+                  <option value="Chennai">Chennai</option>
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Pune">Pune</option>
+                  <option value="Noida">Noida</option>
+                </select>
+                <div *ngIf="submitted && f['workLocation'].errors" class="invalid-feedback">
+                  <div *ngIf="f['workLocation'].errors['required']">Work Location is required</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label style="font-weight: bold;">Gender</label>
+                <select formControlName="gender" class="form-control" [(ngModel)]="employee.gender">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="others">Others</option>
+                </select>
+                <div *ngIf="submitted && f['gender'].errors" class="invalid-feedback">
+                  <div *ngIf="f['gender'].errors['required']">Gender is required</div>
+                </div>
+              </div>
+               <div class="form-group col">
+                <label style="font-weight: bold;">Password</label>
+                <input type="password" formControlName="password" class="form-control" [(ngModel)]="employee.password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">Password is required</div>
+                  <div *ngIf="f['password'].errors['minlength']">Password must be at least 8 characters</div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <button class="btn btn-primary mr-1 submit-button" type="submit"><span></span><span></span><span></span><span></span>Submit</button>
+              <button class="btn btn-secondary cancel-button" type="reset" (click)="onReset()">Cancel</button><br>
+            </div>
+          </form>
         </div>
-        <div class="text-center">
-            <button routerLink="/employees" routerLinkActive="active" class="routing-button" style="font-weight: bold;">Employee List</button>
-        </div>
-        </form>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-  </div>
+  
   

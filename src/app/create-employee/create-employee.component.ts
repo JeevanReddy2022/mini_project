@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
-import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder,FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-employee',
@@ -21,6 +21,11 @@ export class CreateEmployeeComponent {
       firstName: ['', [Validators.required, Validators.minLength(5), this.noNumbersOrSpecialCharacters]],
       lastName: ['', [Validators.required, Validators.minLength(5), this.noNumbersOrSpecialCharacters]],
       email: ['', [Validators.required, Validators.email]],
+      mobileno: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
+      dob: ['', [Validators.required, this.validateDOB]],
+      workLocation: ['', Validators.required],
+      gender: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]],
         }, {
           // validator: MustMatch('password', 'confirmPassword')
         });
@@ -62,6 +67,17 @@ export class CreateEmployeeComponent {
   onReset() {
     this.submitted = false;
     this.addEmployee.reset();
+}
+
+validateDOB(control: AbstractControl): ValidationErrors | null {
+  const selectedDate = new Date(control.value);
+  const currentDate = new Date();
+
+  if (selectedDate.getFullYear() > 2003) {
+    return { invalidDOB: true };
+  }
+
+  return null;
 }
 
 }

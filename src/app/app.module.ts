@@ -17,6 +17,8 @@ import { LeavestatusComponent } from './leavestatus/leavestatus.component';
 import { CertificatestatusComponent } from './certificatestatus/certificatestatus.component';
 import { ApproveRejectLeaveComponent } from './approve-reject-leave/approve-reject-leave.component';
 import { ApproveRejectCertificatesComponent } from './approve-reject-certificates/approve-reject-certificates.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -36,6 +38,8 @@ import { ApproveRejectCertificatesComponent } from './approve-reject-certificate
     CertificatestatusComponent,
     ApproveRejectLeaveComponent,
     ApproveRejectCertificatesComponent,
+    FooterComponent,
+    HomeComponent,
     
    
   ],
