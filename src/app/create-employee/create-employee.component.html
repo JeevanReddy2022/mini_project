@@ -1,5 +1,5 @@
   <div class="bgc">
-    <!--img stytle='background-size:cover,' src="https://t4.ftcdn.net/jpg/02/69/27/97/240_F_269279788_BTRK3S1z4yaMDJSnQw1MloWaxGP0NAyO.jpg" alt=""-->
+    <img stytle='background-size:cover,' src="https://t4.ftcdn.net/jpg/02/69/27/97/240_F_269279788_BTRK3S1z4yaMDJSnQw1MloWaxGP0NAyO.jpg" alt="">
 <div class="container">
       <div class="card" style="background-color: rgb(105, 192, 213); opacity: 0.85;">
         <button routerLink="/manager" routerLinkActive="active" class="custom-btn btn-1">Home</button>
@@ -51,6 +51,25 @@
               </div>
              
               <div class="form-group col">
+                <label style="font-weight: bold;">Password</label>
+                <input type="password" formControlName="password" class="form-control" [(ngModel)]="employee.password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                  <div *ngIf="f['password'].errors['required']">Password is required</div>
+                  <div *ngIf="f['password'].errors['minlength']">Password must be at least 8 characters</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label style="font-weight: bold;">Date of Joining</label>
+                <input type="date" formControlName="doj" class="form-control" [(ngModel)]="employee.doj" [ngClass]="{ 'is-invalid': submitted && f['doj'].errors }" />
+                <div *ngIf="submitted && f['doj'].errors" class="invalid-feedback">
+                  <div *ngIf="f['doj'].errors['required']">Date of Joining is required</div>
+                </div>
+              </div>
+               <div class="form-group col">
+                
                 <label style="font-weight: bold;">Work Location</label>
                 <select formControlName="workLocation" class="form-control" [(ngModel)]="employee.workLocation">
                   <option value="">Select Work Location</option>
@@ -64,30 +83,16 @@
                   <div *ngIf="f['workLocation'].errors['required']">Work Location is required</div>
                 </div>
               </div>
-              
             </div>
             <div class="form-row">
-              <div class="form-group col">
-                <label style="font-weight: bold;">Gender</label>
-                <select formControlName="gender" class="form-control" [(ngModel)]="employee.gender">
-                  <option value="">Select Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="others">Others</option>
-                </select>
-                <div *ngIf="submitted && f['gender'].errors" class="invalid-feedback">
-                  <div *ngIf="f['gender'].errors['required']">Gender is required</div>
-                </div>
-              </div>
-               <div class="form-group col">
-                <label style="font-weight: bold;">Password</label>
-                <input type="password" formControlName="password" class="form-control" [(ngModel)]="employee.password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
-                <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
-                  <div *ngIf="f['password'].errors['required']">Password is required</div>
-                  <div *ngIf="f['password'].errors['minlength']">Password must be at least 8 characters</div>
-                </div>
+              <label style="font-weight: bold;">Manager Name</label>
+              <input type="text" formControlName="managerName" class="form-control" [(ngModel)]="employee.managerName" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
+              <div *ngIf="submitted && f['managerName'].errors" class="invalid-feedback">
+                <div *ngIf="f['managerName'].errors['required']">manager Name is required</div>
               </div>
             </div>
+
+
             <div class="text-center">
               <button class="btn btn-primary mr-1 submit-button" type="submit"><span></span><span></span><span></span><span></span>Submit</button>
               <button class="btn btn-secondary cancel-button" type="reset" (click)="onReset()">Cancel</button><br>

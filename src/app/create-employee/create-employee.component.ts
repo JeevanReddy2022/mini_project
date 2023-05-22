@@ -23,9 +23,11 @@ export class CreateEmployeeComponent {
       email: ['', [Validators.required, Validators.email]],
       mobileno: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       dob: ['', [Validators.required, this.validateDOB]],
+      doj: ['', [Validators.required, this.validateDOB]],
       workLocation: ['', Validators.required],
       gender: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(8)]],
+      managerName: ['', [Validators.required, Validators.minLength(5), this.noNumbersOrSpecialCharacters]],
         }, {
           // validator: MustMatch('password', 'confirmPassword')
         });

@@ -5,7 +5,9 @@ export class Employee {
     emailId: string;
     mobileno:number;
     password:string;
-    dob: string;
+    dob: Date;
+    doj:Date;
     workLocation:string;
     gender:string;
+    managerName:string;
 }
