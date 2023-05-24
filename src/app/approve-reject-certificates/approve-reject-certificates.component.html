@@ -1,33 +1,30 @@
 <div class="bgc">
+  <div class="container">
+    <h2 style="display: flex; align-items: center; font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;">
+      <button routerLink="" class="btn btn-primary" style="margin-right: 10px;">Home</button>
+      CERTIFICATES APPROVAL
+    </h2>
 
-    <div class="container">
-        <h2 style="display: flex; align-items: center; font-family: 'Times New Roman', Times, serif; font-weight: bold; color: #ffffff;">
-          <button routerLink="" class="btn btn-primary" style="margin-right: 10px;">Home</button>
-          CERTIFICATES APPROVAL
-        </h2>
-      
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Employee Name</th>
-                <th>Certificate Name</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let certificate of certificates">
-                <td style="color: #ffffff;font-weight: 700;">{{ certificate.employeeName }}</td>
-                <td style="color: #ffffff;font-weight: 700;">{{ certificate.name }}</td>
-                <td>
-                  <button (click)="approveCertificate(certificate)" class="accept-button">Approve</button>
-                  <button (click)="rejectCertificate(certificate)" class="delete-button">Reject</button>
-                  <button (click)="downloadCertificate(certificate)" class="download-button">Download</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Employee Name</th>
+          
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let certificate of certificates">
+            <td style="color: #ffffff; font-weight: 700;">{{ certificate.employeeName }}</td>
+          <td>
+              <button (click)="approveCertificate(certificate)" class="accept-button">Approve</button>
+              <button (click)="rejectCertificate(certificate)" class="delete-button">Reject</button>
+              <button (click)="downloadCertificate(certificate)" class="download-button">Download</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  </div>
-  </div>
-  
+</div>
