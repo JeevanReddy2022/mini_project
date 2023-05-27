@@ -19,6 +19,7 @@ import { ApproveRejectLeaveComponent } from './approve-reject-leave/approve-reje
 import { ApproveRejectCertificatesComponent } from './approve-reject-certificates/approve-reject-certificates.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { AttendenceComponent } from './attendence/attendence.component';
 
 
 
@@ -40,6 +41,7 @@ import { HomeComponent } from './home/home.component';
     ApproveRejectCertificatesComponent,
     FooterComponent,
     HomeComponent,
+    AttendenceComponent,
     
    
   ],
